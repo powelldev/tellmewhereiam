@@ -1,0 +1,105 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tvLatLong"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/latlang" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLatLong"
+        android:text="@string/addr" />
+    
+    <ImageButton
+        android:id="@+id/btnFindMe"
+        android:src="@drawable/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/findme" />
+    
+    <RelativeLayout
+        android:id="@+id/rlMapAndButtons"
+		android:layout_alignParentLeft="true"
+		android:layout_centerHorizontal="true"
+		android:layout_above="@+id/adViewPlaceHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+	    <Button
+	        android:id="@+id/btnMapView"
+	        android:layout_width="96dp"
+	        android:layout_height="48dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/btnHybridView"
+	        android:text="@string/btnMapView" />
+	
+	    <Button
+	        android:id="@+id/btnHybridView"
+	        android:layout_width="96dp"
+	        android:layout_height="48dp"
+			android:layout_centerHorizontal="true"
+	        android:text="@string/btnHybridView" />
+	
+	    <Button
+	        android:id="@+id/btnSatView"
+	        android:layout_width="96dp"
+	        android:layout_height="48dp"
+	        android:layout_toRightOf="@id/btnHybridView"
+	        android:text="@string/btnSatView" />
+	    
+    <fragment
+        android:id="@+id/map"
+			android:layout_below="@+id/btnSatView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="275dp"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+	    <!-- <ImageView
+			android:layout_below="@+id/btnSatView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="188dp"
+	        android:background="#88ffff"
+	        /> -->
+	    
+	</RelativeLayout>
+	<com.google.ads.AdView
+        android:id="@+id/adViewPlaceHolder"
+       android:layout_alignParentBottom="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        ads:adUnitId="a151588f8f3cfd8"
+       ads:adSize="BANNER"
+       ads:l1oadAdOnCreate="true"
+	    />
+    <!--  ads:testDevices="TEST_EMULATOR, HT08HHL02536"  -->
+    
+    <!-- <ImageView 
+        android:id="@+id/adViewPlaceHolder"
+        android:layout_alignParentBottom="true"
+        android:layout_height="48dp"
+        android:layout_width="fill_parent"
+        android:background="#ff99ff"/>
+ -->
+
+	<ImageButton
+	    android:id="@+id/btnCpy"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@+id/btnFindMe"
+	    android:src="@drawable/copy"
+	    android:text="@string/copy" />
+
+</RelativeLayout>

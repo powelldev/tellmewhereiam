@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tell Me Where I Am</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnMapView">Map</string>
+    <string name="btnSatView">Satellite</string>
+    <string name="btnHybridView">Hybrid</string>
+    <string name="latlang">Latitude: \nLongitude: \nAccuracy:</string>
+    <string name="addr">"Address: "</string>
+    <string name="copy">Copy</string>
+    <string name="findme">Find Me!</string>
+
+</resources>
