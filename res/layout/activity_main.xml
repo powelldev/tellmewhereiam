@@ -21,7 +21,7 @@
     
     <ImageButton
         android:id="@+id/btnFindMe"
-        android:src="@drawable/refresh"
+        android:src="@drawable/locate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -78,10 +78,10 @@
         android:id="@+id/adViewPlaceHolder"
        android:layout_alignParentBottom="true"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-        ads:adUnitId="a151588f8f3cfd8"
-       ads:adSize="BANNER"
-       ads:l1oadAdOnCreate="true"
+       android:layout_height="wrap_content" />
+     <!--    ads:adUnitId="a151588f8f3cfd8" -->
+     <!--  ads:adSize="BANNER" -->
+     <!-- ads:loadAdOnCreate="true"  -->
 	    />
     <!--  ads:testDevices="TEST_EMULATOR, HT08HHL02536"  -->
     
